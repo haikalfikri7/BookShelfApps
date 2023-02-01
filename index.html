@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.min.css"/>
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <title>BookShelfApps</title>
+</head>
+<body>
+    
+    <header>
+        <img src="assets/img/logo.png" alt="" width="40"><h1 class="header_title">BookShelf Apps</h1>
+    </header>
+
+    <main>
+        <section class="tool_bar">
+            <div class="search">
+                <form id="search_book">
+                    <input type="text" placeholder="Search Book ...." autocomplete="off" id="search_book_field">
+                    <button class="button button-primary" id="searchButton" type="submit"><i class="large material-icons">search</i></button>
+                </form>
+            </div>
+            <button class="button button-primary" type="button" id="addButton"><i class="large material-icons">add_circle</i>New Book</button>
+        </section>
+
+        <section class="modals hide">
+            <section class="input-section card">
+                <span class="close">&times;</span>
+                <h2>Add Book</h2>
+                <form id="inputBook">
+                    <div class="input">
+                        <label for="inputBookTitle">Title: </label>
+                        <input id="inputBookTitle" type="text" required autofocus placeholder="Type Book Title.." autocomplete="off">
+                    </div>
+                    <div class="input">
+                        <label for="inputBookAuthor">Author: </label>
+                        <input id="inputBookAuthor" type="text" required autofocus placeholder="Type Book Author.." autocomplete="off">
+                    </div>
+                    <div class="input">
+                        <label for="inputBookYear">Year: </label>
+                        <input id="inputBookYear" type="number"  required min="1700" max="2022" placeholder="Type Year of Publication..">
+                    </div>
+                    <div class="input-inline">
+                        <input id="inputBookIsComplete" type="checkbox">
+                        <label for="inputBookIsComplete">Finished</label>
+                    </div>
+                    <button class="button button-primary" id="bookSubmit" type="submit"><i class="large material-icons">save</i><span>Unfinished</span></button>
+                </form>
+            </section>
+        </section>
+
+        <div class="display_book">
+            <div class="bookself card">
+                <h2>Unfinished</h2>
+                <div class="" id="not-finished">
+                    <div class="item card">
+                        <div class="book">
+                            <h3>Blank Book List</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bookself card">
+                <h2>Finisshed</h2>
+                <div class="" id="finished">
+                    <div class="item card">
+                        <div class="book">
+                            <h3>Blank Book List</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+
+</body>
+</html>
